@@ -10,7 +10,17 @@ Use console.log() to write the proper output to the command line.
 **/
 
 const fizzbuzz = () => {
-  // Add your code here
+    /** loop from 1 to 100 checking if divisible **/
+    for(let i = 1; i < 101; i++){
+        if(i % 5 == 0 && i % 3 == 0)
+            console.log('fizzbuzz')
+        else if(i % 5 == 0)
+            console.log('buzz')
+        else if(i % 3 == 0)
+            console.log('fizz')
+        else 
+            console.log(i)
+    }
 };
 
 fizzbuzz();
