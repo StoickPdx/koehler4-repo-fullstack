@@ -1,5 +1,8 @@
 /** Exercise 01 - Coins **/
 
+//Brian Koehler
+//Full Stack - Portland State
+
 const pluralize = (num, plural, single) => {
   return num > 1 ? plural : single;
 };

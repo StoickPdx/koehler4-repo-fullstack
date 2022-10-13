@@ -1,5 +1,8 @@
 /** Exercise 02 - Reverse **/
 
+//Brian Koehler
+//Full Stack - Portland State
+
 // Input of elemends from HTML
 let userInput = document.getElementById("input");
 //Input element for button
