@@ -14,6 +14,30 @@
   <body class="bg-dark">
     <form class="bg-light border rounded w-50 mx-auto mt-5 p-3">
       <h1 class="mt-2 mb-4">Contact Form</h1>
+
+      <label for="nameInput" class="form-label">Name *</label>
+      <input id="nameInput" class="form-control" required/>
+     
+      <label for="emailInput" class="form-label">Email * </label>
+      <input id="emailInput" class="form-control" required/>
+
+      <label for="messageBox" class="form-label">Submit your message:</label>
+      <textarea class="form-control" id="messageBox"></textarea>
+
+      <label class="form-check-label">
+        <input type="checkbox" class="form-check-input" value="" id="newsletter"/> Sign up for
+        the newsletter</label>
+      <br />
+      <br />
+        <div class="row" >
+          <div class="col d-grid">
+            <button type="button" class="btn btn-primary btn-lg" id="submit">Submit</button>
+          </div>
+          <div class="col d-grid">
+            <button type="reset" class="btn btn-secondary btn-lg">Reset</button>
+        </div>
+      </div>
     </form>
+    <!-- Form from bootstrap-->
   </body>
 </html>
