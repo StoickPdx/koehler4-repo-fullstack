@@ -6,9 +6,11 @@
 const pluralize = (num, plural, single) => {
   return num > 1 ? plural : single;
 };
+
 const calculateChange = (input) => {
   // Add your code here
-  if (input === 0) return "No Change Required";
+  if (input === 0 || input > 10) return "No Change Available";
+  if (isNaN(input)) return "Input Numbers Only";
 
   let curChange = input;
   let curDollar = Math.floor(curChange / 1);
@@ -23,7 +25,8 @@ const calculateChange = (input) => {
   curChange -= curPenny * 0.01;
 
   return (
-    "input" +
+    "$" +
+    input +
     " ==> " +
     curDollar +
     pluralize(curDollar, " dollars, ", " dollar, ") +
