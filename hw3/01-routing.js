@@ -40,32 +40,32 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, { "Content-Type": "text/html" });
     res.write(`<h1>Exercise 01</h1>`);
     res.write(`<ul> ${routeResults} </ul>`);
-    res.end();
+    return res.end();
   }
 
   // Add your code here
   else if (req.url === `/${routes[0]}`) {
     res.writeHead(200, { "Content-Type": "text/html" });
     res.write("<h1>Welcome to a new world.</h1>");
-    res.end();
+    return res.end();
   }
   // Redirect Route
   else if (req.url === `/${routes[1]}`) {
     res.writeHead(302, { Location: `/${routes[2]}` });
-    res.end();
+    return res.end();
   }
   // Redirected Route
   else if (req.url === `/${routes[2]}`) {
     res.writeHead(200, { "Content-Type": "text/html" });
     res.write("<h1>You have been redirected.</h1>");
-    res.end();
+    return res.end();
   }
   // Cache Route
   else if (req.url === `/${routes[3]}`) {
     res.setHeader("CacheControl", "max-age=86400");
     res.writeHead(200, { "Content-Type": "text/plain" });
     res.write("this resource was cached");
-    res.end();
+    return res.end();
   }
   // Cookie Route
   else if (req.url === `/${routes[4]}`) {
@@ -74,7 +74,7 @@ const server = http.createServer((req, res) => {
       "Content-Type": "text/plain",
     });
     res.write("cookies... yummm");
-    res.end();
+    return res.end();
   }
   // Cookie Route
   else if (req.url === `/${routes[5]}`) {
@@ -82,13 +82,13 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, { "Content-Type": "text/plain" });
     if (Cookie === "hello=world") res.write("Yes");
     else res.write("No");
-    res.end();
+    return res.end();
   }
   // Error not found
   else {
     res.writeHead(404, { "Content-Type": "text/plain" });
     res.write("404 Not Found");
-    res.end();
+    return res.end();
   }
 });
 
