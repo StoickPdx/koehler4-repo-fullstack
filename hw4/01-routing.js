@@ -79,7 +79,7 @@ app.get("/cookie", (req, res) => {
 
 app.get("*", (req, res) => {
   res.writeHead(404, { "Content-Type": "text/html" });
-  res.write("<h1>404 Not Found</h1>");
+  res.write("<h1>404 - page not found</h1>");
   res.end();
 });
 
