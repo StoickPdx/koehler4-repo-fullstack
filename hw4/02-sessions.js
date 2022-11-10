@@ -8,6 +8,7 @@ const port = process.env.PORT || 5000;
 // Use the express-session module
 app.use(
   session({
+    store: new session.MemoryStore(),
     secret: "12345678",
     saveUninitialized: true,
     cookie: {
